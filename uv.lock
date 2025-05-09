@@ -99,7 +99,6 @@ dependencies = [
     { name = "ftfy" },
     { name = "ipykernel" },
     { name = "matplotlib" },
-    { name = "numpy" },
     { name = "packaging" },
     { name = "regex" },
     { name = "scikit-image" },
@@ -119,16 +118,15 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "ftfy", specifier = ">=6.3.1" },
-    { name = "ipykernel", specifier = ">=6.29.5" },
-    { name = "matplotlib", specifier = ">=3.10.1" },
-    { name = "numpy", specifier = ">=2.2.5" },
-    { name = "packaging", specifier = ">=25.0" },
-    { name = "regex", specifier = ">=2024.11.6" },
-    { name = "scikit-image", specifier = ">=0.25.2" },
-    { name = "torch", specifier = ">=2.7.0" },
-    { name = "torchvision", specifier = ">=0.22.0" },
-    { name = "tqdm", specifier = ">=4.67.1" },
+    { name = "ftfy" },
+    { name = "ipykernel" },
+    { name = "matplotlib" },
+    { name = "packaging" },
+    { name = "regex" },
+    { name = "scikit-image" },
+    { name = "torch" },
+    { name = "torchvision" },
+    { name = "tqdm" },
 ]
 
 [package.metadata.requires-dev]
