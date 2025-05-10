@@ -9,16 +9,20 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "fire>=0.7.0",
     "ftfy>=6.3.1",
     "ipykernel>=6.29.5",
     "matplotlib>=3.10.1",
     "numpy>=2.2.5",
     "packaging>=25.0",
+    "pandas>=2.2.3",
+    "pycocotools>=2.0.8",
     "regex>=2024.11.6",
     "scikit-image>=0.25.2",
     "torch>=2.7.0",
     "torchvision>=0.22.0",
     "tqdm>=4.67.1",
+    "wandb>=0.19.11",
 ]
 
 [tool.setuptools.packages.find]
