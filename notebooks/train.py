@@ -38,6 +38,7 @@ def main(
     image_dir="/home/ghoti/llm/transformer/clip_learn/",
     train_csv="~/llm/transformer/clip_learn/data/flickr8k_train.csv",
     val_csv="~/llm/transformer/clip_learn/data/flickr8k_val.csv",
+    save_dir="/home/ghoti/CLIP_test/models",
     model_name="ViT-B/32",
     batch_size=8,
     epochs=5,
@@ -121,6 +122,17 @@ def main(
 
             val_loss /= len(val_loader)
             print(f"Validation Loss after Epoch [{epoch + 1}/{epochs}]: {val_loss:.4f}")
+
+    os.makedirs(os.path.join(save_dir, wandb.run.name), exist_ok=True)
+    torch.save(
+        {
+            "model_state_dict": model.state_dict(),
+            "optimizer_state_dict": optimizer.state_dict(),
+            "loss": val_loss,
+        },
+        os.path.join(save_dir, wandb.run.name, "model.pth"),
+    )
+    wandb.finish()
 
 
 if __name__ == "__main__":
